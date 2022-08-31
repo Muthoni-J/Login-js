@@ -34,12 +34,13 @@ span{
     font-size: 20px;   
 }
 .inputs input{
-    width: 300px;
+    width: 320px;
     height: 40px;
-    border-radius: 10px solid rgb(black);
+    border-radius: 10px ;
+    
 }
 .checkbox .forgot{
-    padding: 140px;
+    padding: 55px;
 }
 button{
     border: none;
@@ -65,7 +66,7 @@ button{
 .social-icons i{
     padding-left: 40px;
     margin: 20px 10px;
-    display: inline;
+    display: center;
    
 
 
