@@ -1,27 +1,43 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import './login.css'
 import cyclist from './cyclist.jpg'
-function Login(){
 
+function Login() {
+    const [email,setEmail]=useState("")
+    const[password,setPassword]=useState("");
+    const handleSubmit=()=>{
+        const data ={
+            email:email,
+            password:password
+        }
+        alert (JSON.stringify(data))
+    }
 
 return(
    <div className="holder">
-    <div className="Eddie">
+    <div className="Eddie"> 
     <p><span>EddieShop</span></p>
     <p className="SignUp">Don't have an account ?<span>SignUp</span></p>
     </div>
   
    <h1>Welcome</h1>
    <div className="details">
-    <form>
+    <form onSubmit={handleSubmit}>
         <div className="inputs">
             <label className="email">Your Email
-            <input type = "email" name="emailAddress" placeholder="name@domain.com"/>
+            <input type = "email" name="emailAddress" placeholder="name@domain.com" 
+             value={email}
+            onChange ={(e)=>{setEmail(e.target.value)}}
+            />
             </label>
         </div>
         <div className="inputs">
             <label >Password
-            <input type = "password" name="password" placeholder="at least 8 characters"/>
+            <br/>
+            <br/>
+            <input type = "password" name="password" placeholder="at least 8 characters" value={password}
+            onChange ={(e)=>{setPassword(e.target.value)}}/>
+            
             </label>
         </div>
         <div className="checkbox">

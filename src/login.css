@@ -67,7 +67,9 @@ button{
     padding-left: 40px;
     margin: 20px 10px;
     display: center;
-   
 
-
+}
+.social-icons{
+    color: rgb(119, 121, 122);
+    border-radius: 40%;
 }
